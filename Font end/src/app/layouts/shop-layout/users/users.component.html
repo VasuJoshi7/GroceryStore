@@ -1,0 +1,56 @@
+<div>
+
+</div>
+<div class="card" style="margin-top: 15px;">
+    <div class="card-header">
+        <h4 class="card-title"> User Table</h4>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table">
+                <thead class=" text-primary">
+                    <th>
+                        User Name
+                    </th>
+                    <th>
+                        Email id
+                    </th>
+                    <th>
+                        Password
+                    </th>
+                    <th>
+                        User role
+                    </th>
+                    <th class="text-right">
+                        action
+                    </th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            shubham magdum
+                        </td>
+                        <td>
+                            test@gmail.com
+                        </td>
+                        <td>
+                            abc@123
+                        </td>
+                        <td>
+                            Admin
+                        </td>
+                        <td class="text-right">
+                            <span style="cursor: pointer;margin: 0px 10px;">
+                                <i class="nc-icon nc-settings" title="edit" (click)="addEdit(1)"></i>
+                            </span>
+                            <span style="cursor: pointer;margin: 0px 10px;">
+                                <i class="nc-icon nc-simple-remove" title="delete"
+                                    (click)="deleteUser(1);"></i>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="Custom-sidebar">
+    <nav id="sidebar">
+        <ul class="list-unstyled components">
+            <li *ngFor="let item of menuItem" routerLink="{{item.href}}" routerLinkActive="active">
+                <a>
+                    <h6><strong>{{item.name}}</strong></h6>
+                </a>
+            </li>
+            <li (click)="Logout()">
+                <a>
+                    <h6><strong>Logout</strong></h6>
+                </a>
+            </li>
+
+
+            <!-- <li>
+                <a>
+                    <h6><strong>Cash Flow</strong></h6>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <h6><strong>Payments</strong></h6>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <h6><strong>Settings</strong></h6>
+                </a>
+            </li> -->
+        </ul>
+    </nav>
+</div>

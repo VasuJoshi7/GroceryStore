@@ -1,0 +1,105 @@
+<div class="container-fluid" style="display: flex;">
+    <div id="result" class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h4 style="margin: 0px;">Order Delivery Detail</h4>
+            </div>
+            <div class="card-body">
+                <div class="container">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="txtFirstName">First Name</label>
+                                <input type="text" class="form-control" [(ngModel)]="objOrder.firstName" name="firstname" id="txtFirstName" placeholder="First Name">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="txtLstName">Last Name</label>
+                                <input type="text" class="form-control" [(ngModel)]="objOrder.lastName" name="firstname" id="txtLstName" placeholder="Last Name">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="txtPhoneNumber">Phone Number</label>
+                                <input type="text" class="form-control" [(ngModel)]="objOrder.Phone" name="lirstname" id="txtPhoneNumber" placeholder="Phone No">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="txtEmail">Email</label>
+                                <input type="email" class="form-control" [(ngModel)]="objOrder.email" name="email" id="txtEmail" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="txtStreet">Address</label>
+                                <input type="text" class="form-control" [(ngModel)]="objOrder.address" name="address" id="txtStreet" placeholder="Street">
+                            </div>
+                        </div>
+                     
+                        <!-- <button type="submit" style="float: right;" class="btn btn-primary">Save Order</button> -->
+                    </form>
+                </div>
+            </div>
+            <div class="card-footer">
+
+            </div>
+        </div>
+    </div>
+    <div id="filter" class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h4 style="margin: 0px;">Product Detail</h4>
+            </div>
+            <div class="card-body">
+                <div class="container" >
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="txtFirstName">Product Name:</label>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="txtFirstName">{{orders.name}}</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="txtFirstName" >Order Date:</label>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="txtFirstName">sdfsff</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="txtFirstName">Price:</label>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="txtFirstName">{{orders.price}}</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="txtFirstName">Qantity:</label>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="number" class="form-control" id="txtLstName" value="2"
+                                    placeholder="Last Name">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="txtFirstName">Total Amount:</label>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="txtFirstName">25000</label>
+                            </div>
+                        </div>
+                        <button type="submit" style="float: right;" class="btn btn-primary" (click)="OrderSaveClick();">Check Out</button>
+                    </form>
+                </div>
+            </div>
+            <div class="card-footer">
+                
+            </div>
+        </div>
+    </div>
+</div>

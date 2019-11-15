@@ -1,0 +1,21 @@
+.sideFilter {
+  border-right: 1px solid lightgray;
+}
+.product {
+  display: flex;
+  margin: 20px 0px;
+  padding: 10px 0px;
+  border-bottom: 1px solid lightgray;
+  .product-desc {
+    display: flex;
+  }
+}
+
+.btn-cart{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.checkbox{
+  width: 100%;
+}

@@ -1,0 +1,47 @@
+<nav class="navbar navbar-horizontal navbar-expand-lg navbar-dark bg-default">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-default"
+      aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-default">
+      <div class="navbar-collapse-header">
+        <div class="row">
+          <div class="col-6 collapse-brand">
+            <a href="../../index.html">
+              <img src="assets/img/brand/brand.png" height="40" width="80" />
+            </a>
+          </div>
+          <div class="col-6 collapse-close">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-default"
+              aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <ul class="navbar-nav ml-lg-auto">
+
+        <li class="nav-item" *ngIf="!isLogin" style="cursor: pointer;">
+          <a class="nav-link nav-link-icon">
+            <i class="ni ni-notification-70"></i>
+            <span class="nav-link-inner--text " (click)="login()">login & signup</span>
+          </a>
+        </li>
+        <li class="nav-item" *ngIf="isLogin" style="cursor: pointer;">
+          <a class="nav-link nav-link-icon">
+            <i class="ni ni-notification-70"></i>
+            <span class="nav-link-inner--text " (click)="logout()">logout</span>
+          </a>
+        </li>
+        <!-- <li class="nv-item">
+          <a class="nav-link nav-link-icon">
+            <i class="nc-icon nc-cart-simple"></i>
+            <span class="nav-link-inner--text ">cart</span>
+          </a>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+</nav>

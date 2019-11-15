@@ -1,0 +1,62 @@
+<div>
+
+</div>
+<div class="card" style="margin-top: 15px;">
+    <div class="card-header">
+        <span style="float: left;">
+            <h4 class="card-title"> Product Table</h4>
+        </span>
+        <button class="btn btn-info" style="float: right;" (click)="addEdit(0);">Add Product</button>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table">
+                <thead class=" text-primary">
+                    <th>
+                        Product Name
+                    </th>
+                    <th>
+                        Category
+                    </th>
+                    <th>
+                        Price
+                    </th>
+                    <th>
+                        Active
+                    </th>
+                    <th class="text-right">
+                        action
+                    </th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of ProductList">
+                        <td>
+                            {{product.name}}
+                        </td>
+                        <td>
+                            {{product.category}}
+                        </td>
+                        <td>
+                            $ {{product.price}}
+                        </td>
+                        <td>
+                            {{product.isActive==true?'Active':'Inactive'}}
+                        </td>
+                        <td class="text-right">
+                            <span style="cursor: pointer;margin: 0px 10px;">
+                                <i class="nc-icon nc-settings" title="edit" (click)="addEdit(product._id);"></i>
+                            </span>
+                            <span style="cursor: pointer;margin: 0px 10px;">
+                                <i class="nc-icon nc-simple-remove" title="delete"
+                                    (click)="deleteProduct(product._id);"></i>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr *ngIf="ProductList.lenght==0">
+                        <td colspan="5">no prodtucts</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

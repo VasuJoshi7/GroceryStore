@@ -1,0 +1,67 @@
+<div class="container-fluid" style="display: flex;">
+    <div id="filter" class="col-md-2">
+        <div class="card">
+            <div class="card-header">
+                <h4 style="margin: 0px;">Filter</h4>
+            </div>
+            <div class="card-body">
+                <label class="checkbox" for="checkbox1">
+                    <input type="checkbox" value="" id="checkbox1" data-toggle="checkbox">
+                    less than $20
+                </label>
+                <label class="checkbox" for="checkbox2">
+                    <input type="checkbox" value="" id="checkbox2" data-toggle="checkbox">
+                    $20 to $50
+                </label>
+                <label class="checkbox" for="checkbox3">
+                    <input type="checkbox" value="" id="checkbox3" data-toggle="checkbox">
+                    $51 to $100
+                </label>
+                <label class="checkbox" for="checkbox4">
+                    <input type="checkbox" value="" id="checkbox4" data-toggle="checkbox">
+                    $100 to $200
+                </label>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-success">Apply Filter</button>
+            </div>
+        </div>
+    </div>
+    <div id="result" class="col-md-10">
+        <div class="card">
+            <div class="card-header">
+                <h4 style="margin: 0px;">{{categryName}}</h4>
+            </div>
+            <div class="card-body">
+                <div class="container">
+                    <div class="product" *ngFor="let product of productList">
+                        <div class="col-md-2">
+                            <img class="card-img-top" src="assets/img/category/c1.png" alt="Card image cap"
+                                width="120" height="120" />
+                        </div>
+                        <div class="col-md-10 product-desc">
+                            <div class="col-md-8">
+                                <label class="text-success">{{product.name}}</label>
+                                <ul>
+                                    <li>{{product.description}}</li>
+                                </ul>
+                            </div>
+                            <div class="col-4">
+                                <label>
+                                    <h4 style="margin: 0px;"><strong> ${{product.price}}</strong></h4>
+                                </label>
+                                <p><del>{{product.price}}</del> <label class="badge text-success"> &nbsp;18%
+                                        of</label></p>
+                                <button class="btn-cart btn btn-success btn-round" (click)="OrderClick(product._id);"><i
+                                        class="nc-icon nc-cart-simple" >&nbsp;</i>Buy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+.Custom-sidebar {
+  padding: 15px 0 0 15px;
+  background: #2a7fff;
+  height: 100%;
+}
+
+nav {
+  ul {
+    li {
+      margin-bottom: 15px;
+      a {
+        text-decoration: none;
+        color: #ffffff;
+      }
+      padding: 5px 15px 1px;
+    }
+    li:hover,
+    li.active {
+      a {
+        color: #2a7fff;
+      }
+      cursor: pointer;
+      background: #ffffff;
+      border-bottom-left-radius: 15px;
+      border-top-left-radius: 15px;
+    }
+  }
+}
